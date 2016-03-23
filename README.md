@@ -1,5 +1,4 @@
-Tech Test for Springer
-
+**Tech Test for Springer**
 
 I was given the task of writing a simple console version of a drawing program. At this time, the functionality of the program is quite limited but this might change in the future. In a nutshell, the program should work as follows:
 1. create a new canvas.
