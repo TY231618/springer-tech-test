@@ -7,9 +7,19 @@ class Canvas
     @width = width
   end
 
+  def display
+    border_sides
+    border_top_and_bottom
+    inside_area.each {|element| puts element.join}
+  end
+
+  private
+
   def border_sides
-    inside_area.push('|')
-    inside_area.unshift('|')
+    inside_area.each do |row|
+      row.push('|')
+      row.unshift('|')
+    end
   end
 
   def border_top_and_bottom
