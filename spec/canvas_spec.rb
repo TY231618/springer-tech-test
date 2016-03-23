@@ -19,6 +19,7 @@ describe Canvas do
     it 'checks border sides' do
       subject.display
       expect(subject.inside_area[1]).to include "|"
+      expect(subject.inside_area[-2]).to include "|"
     end
 
     it 'checks border top' do
@@ -30,6 +31,5 @@ describe Canvas do
       subject.display
       expect(subject.inside_area[-1]).to include "-"
     end
-
   end
 end
