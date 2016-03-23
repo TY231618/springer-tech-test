@@ -22,5 +22,17 @@ describe Canvas do
       expect(canvas.inside_area[0]).to eq "|"
     end
 
+    it 'checks border top' do
+      canvas = Canvas.new(4, 20)
+      canvas.border_top_and_bottom
+      expect(canvas.inside_area[0]).to include "-"
+    end
+
+    it 'checks border bottom' do
+      canvas = Canvas.new(4, 20)
+      canvas.border_top_and_bottom
+      expect(canvas.inside_area[-1]).to include "-"
+    end
+
   end
 end
