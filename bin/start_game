@@ -1,0 +1,36 @@
+#!/usr/bin/env ruby
+
+require './lib/canvas'
+
+COMMANDS = ['C', 'L', 'R', 'B', 'Q']
+
+class String
+  def is_integer?
+    self.to_i.to_s == self
+  end
+end
+
+
+input_check = true
+
+while input_check
+  print "Enter command:"
+  input = gets.chomp.upcase
+
+  input_arr = input.split(' ')
+
+  exit if input[0] == 'Q'
+  input_check = false if COMMANDS.include?(input[0]) && (input_arr[1].is_integer? && input_arr[2].is_integer?)
+
+  p input_check
+  p input_arr
+
+
+
+end
+
+input_arr = input.split(' ')
+
+canvas = Canvas.new(input_arr[1].to_i, input_arr[2].to_i)
+
+p canvas
